@@ -11,3 +11,4 @@ Steps to run test webserver
 4) Please use the shared Postman-API to test the webserver
 
 POSTMAN-LINK: https://www.getpostman.com/collections/d3a1f5e9a2b1d94bf57f
+Note: Make sure you have the Corpus.csv file inside csvFile folder
