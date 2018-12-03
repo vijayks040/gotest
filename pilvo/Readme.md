@@ -7,3 +7,5 @@ username: admin
 password: admin
 4) Navigate to the dashboard buttons to feel all the CRUD operations
 Note: In order to make it lighter in house database is used to store the added contacts, anyhow the same can be achieved using any of the databases
+*********UI built is a basic one******************
+*********Let me know if i can help in running the above app************
