@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Dashboard</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <style>
+         .sidenav {
+         height: 100%;
+         width: 0;
+         position: fixed;
+         z-index: 1;
+         top: 0;
+         left: 0;
+         background-color: #111;
+         overflow-x: hidden;
+         transition: 0.5s;
+         padding-top: 60px;
+         }
+         .sidenav a {
+         padding: 8px 8px 8px 32px;
+         text-decoration: none;
+         font-size: 25px;
+         color: #818181;
+         display: block;
+         transition: 0.3s;
+         }
+         .sidenav a:hover {
+         color: #f1f1f1;
+         }
+         .sidenav .closebtn {
+         position: absolute;
+         top: 0;
+         right: 25px;
+         font-size: 36px;
+         margin-left: 50px;
+         }
+         #main {
+         transition: margin-left .5s;
+         padding: 16px;
+         }
+         @media screen and (max-height: 450px) {
+         .sidenav {padding-top: 15px;}
+         .sidenav a {font-size: 18px;}
+         }
+      </style>
+   </head>
+   <body>
+      <div id="mySidenav" class="sidenav" name="mySidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="javascript:void(0)" onclick="setURL('/create')">Create</a>
+         <a href="javascript:void(0)" onclick="setURL('/update')">Update</a>
+         <a href="javascript:void(0)" onclick="setURL('/search')">Search</a>
+         <a href="javascript:void(0)" onclick="setURL('/delete')">Delete</a>
+      </div>
+      <div class="main" id="main">
+         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; OPERATIONS</span>
+         <h2>PHONE BOOK APP</h2>
+         <p>click on the OPERATIONS button for the CRUD operations.</p>
+         <iframe id="myIframe" src="/create" frameborder="2" width="500" height="400"></iframe>
+      </div>
+      <script>
+         function openNav() {
+         	document.getElementById("mySidenav").style.width = "250px";
+             document.getElementById("main").style.marginLeft = "250px";
+             document.body.style.backgroundColor = "rgba(0,0,0,0.4)";}
+         
+         function closeNav() {
+          	document.getElementById("mySidenav").style.width = "0";
+             document.getElementById("main").style.marginLeft= "0";
+             document.body.style.backgroundColor = "white";
+         	}
+         function setURL(url){
+             document.getElementById('myIframe').src = url;
+         }
+         function resizeIframe(obj) {
+             obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+           }
+      </script>
+   </body>
+</html>

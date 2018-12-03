@@ -1,17 +1,12 @@
 package main
 
 import (
-	//	"encoding/csv"
-	//	"encoding/json"
 	"fmt"
-	//	"io"
 	"log"
 	"net/http"
-	"time"
-
 	"os"
 	"strings"
-	//	"github.com/gocarina/gocsv"
+	"time"
 )
 
 /*struct to unmarshall the csv values*/
@@ -78,6 +73,8 @@ func main() {
 	fmt.Println("Pizza server listening @ port 8080")
 	http.ListenAndServe(":8080", nil)
 }
+
+/*A function to send Notifications to customer once the pizza is ready */
 func sendNotification(name, phone, pizza_title string, file_head *os.File) {
 	time.Sleep(30 * time.Second)
 	fmt.Printf("\nAn SMS has been sent to customer with order details\nPhone:'%s'\nname:'%s'", phone, name)
