@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h2>Create Contact User</h2>
+      <h3>{{.message}}</h3>
+      <form action="/createcontact"  method="post">
+         Name:<br>
+         <input type="text" name="name">
+         <br>
+         Email:<br>
+         <input type="text" name="email" id="email">
+         <br>
+         Phone:<br>
+         <input type="text" name="phone"><br>
+         Address:<br>
+         <input type="text" name="address"><br>
+         <input type="button" value="Create" onclick="submit_by_id()">
+      </form>
+   </body>
+   <script>
+	function submit_by_id(){
+		var x = document.getElementsByTagName("form");
+		var email = document.getElementById("email");
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+        if (reg.test(email.value) == false) 
+        {
+            alert('Invalid Email Address');
+            return false;
+        }else{
+			        x[0].submit();// Form submission
+					return true;
+
+		}
+
+
+	}
+   </script>
+</html>
