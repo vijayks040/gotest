@@ -1,9 +1,10 @@
-This repository was added to support the POC or the CASE-STUDY given for an interview
-1) Please pull the whole target into a common directory
-2) Then build and install the postgre_package and mongo_package
-3) Then build the targetPoc.go(contains the main function) to generate the executable
-4) By defau:lt the application will be running in port 3000
-5) Hit http://localhost:3000 to see the available API's
+This repository was added to support the POC or the CASE-STUDY given for an interview.
+1) Please pull the whole target into a common directory.
+2) Then build and install the postgre_package and mongo_package.
+3) Then build the targetPoc.go(contains the main function) to generate the executable.
+4) By defau:lt the application will be running in port 3000.
+5) Hit http://localhost:3000 to see the available API's.
+6) For running in windows run target.exe as an admin. And for linux run ./target_linux with sudo privilags.
 
 REQUEST Examples:
 
