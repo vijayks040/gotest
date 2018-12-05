@@ -1,3 +1,10 @@
+**Link for the hosted APP: http://55973994.ngrok.io/login
+
+Username: admin
+
+password: admin
+
+**
 Steps to run this PhoneBook app
 1) Download the folder pilvo completely into your working directory
 2) Both windows and linux executables are present in this folder with name pilvo.exe and pilvo_linux
