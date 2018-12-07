@@ -11,6 +11,7 @@ This Go code was added to support the POC or the CASE-STUDY given for an intervi
         -go get github.com/labstack/echo gopkg.in/mgo.v2/bson github.com/lib/pq
         
   - Install postgre sql and MongoDb
+        
         -Create a database table in postgre sql with following sql command,
         
             -CREATE TABLE public.product(
@@ -27,6 +28,7 @@ This Go code was added to support the POC or the CASE-STUDY given for an intervi
             )
 
 **Here public is the database schema and product is the database table name.
+        
         -Create a collection in MongoDB to enter the details of the products created.**
 
 ### API's
