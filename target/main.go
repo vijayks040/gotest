@@ -54,8 +54,8 @@ func createProduct(c echo.Context) error {
 		fmt.Println("error ", err)
 	} else {
 		mongo_package.Createproduct(product_new)
-		return c.String(http.StatusCreated, "Product Added successfully with name "+c.FormValue("name"))
 		fmt.Println("Product Added successfully with name " + c.FormValue("name"))
+		return c.String(http.StatusCreated, "Product Added successfully with name "+c.FormValue("name"))
 	}
 	return err
 }
