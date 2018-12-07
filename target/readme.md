@@ -13,20 +13,18 @@ This Go code was added to support the POC or the CASE-STUDY given for an intervi
   - Install postgre sql and MongoDb
         -Create a database table in postgre sql with following sql command,
         
-        
-            -CREATE TABLE public.product
-(
-    "Productname" text COLLATE pg_catalog."default" NOT NULL,
+            -CREATE TABLE public.product(
+                 "Productname" text COLLATE pg_catalog."default" NOT NULL,
     
-    "currentPrice" double precision NOT NULL,
+                  "currentPrice" double precision NOT NULL,
     
-    "productId" bigint NOT NULL,
+                  "productId" bigint NOT NULL,
     
-    currency text COLLATE pg_catalog."default" NOT NULL,
+                  currency text COLLATE pg_catalog."default" NOT NULL,
     
-    CONSTRAINT product_pkey PRIMARY KEY ("productId")
+                  CONSTRAINT product_pkey PRIMARY KEY ("productId")
     
-)
+            )
 
 **Here public is the database schema and product is the database table name.
         -Create a collection in MongoDB to enter the details of the products created.**
